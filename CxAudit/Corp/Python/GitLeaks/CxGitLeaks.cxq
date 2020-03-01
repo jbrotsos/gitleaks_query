@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<QuerySchema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="CxQuery.xsd">
+  <QueryDataElement>
+    <QueryId>100002</QueryId>
+    <PackageId>100000</PackageId>
+    <Name>CxGitLeaks</Name>
+    <Source>_x002F__x002F__x0020_Regexes_x0020_from_x0020_https:_x002F__x002F_github.com_x002F_dxa4481_x002F_truffleHogRegexes_x002F_blob_x002F_master_x002F_truffleHogRegexes_x002F_regexes.json_x000D__x000A__x000D__x000A_Dictionary_x003C_string_x002C__x0020_string_x003E__x0020_regexes_x0020__x003D__x0020_new_x0020_Dictionary_x003C_string_x002C__x0020_string_x003E__x0028__x0029__x003B__x0020__x000D__x000A_regexes.Add_x0028__x0022_AWS_x0020_Client_x0020_ID_x0022__x002C__x0020__x0022__x0028_A3T_x005B_A-Z0-9_x005D__x007C_AKIA_x007C_AGPA_x007C_AIDA_x007C_AROA_x007C_AIPA_x007C_ANPA_x007C_ANVA_x007C_ASIA_x0029__x005B_A-Z0-9_x005D__x007B_16_x007D__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_AWS_x0020_Secret_x0020_Key_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029_aws_x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x0028__x003F_-i_x0029__x005B__x0027__x005C__x0022__x005D__x005B_0-9a-zA-Z_x005C__x005C__x002F__x002F__x002B__x005D__x007B_40_x007D__x005B__x0027__x005C__x0022__x005D__x0022__x0029__x003B__x0020__x0020__x002F__x002F__x0020_test_x000D__x000A_regexes.Add_x0028__x0022_AWS_x0020_MWS_x0020_key_x0022__x002C__x0020__x0022_amzn_x005C__x005C_.mws_x005C__x005C_._x005B_0-9a-f_x005D__x007B_8_x007D_-_x005B_0-9a-f_x005D__x007B_4_x007D_-_x005B_0-9a-f_x005D__x007B_4_x007D_-_x005B_0-9a-f_x005D__x007B_4_x007D_-_x005B_0-9a-f_x005D__x007B_12_x007D__x0022__x0029__x003B__x0020__x0020__x002F__x002F__x0020_test_x000D__x000A_regexes.Add_x0028__x0022_PKCS8_x0022__x002C__x0020__x0022_-----BEGIN_x0020_PRIVATE_x0020_KEY-----_x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_RSA_x0022__x002C__x0020__x0022_-----BEGIN_x0020_RSA_x0020_PRIVATE_x0020_KEY-----_x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_SSH_x0022__x002C__x0020__x0022_-----BEGIN_x0020_OPENSSH_x0020_PRIVATE_x0020_KEY-----_x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_PGP_x0022__x002C__x0020__x0022_-----BEGIN_x0020_PGP_x0020_PRIVATE_x0020_KEY_x0020_BLOCK-----_x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_Facebook_x0020_Secret_x0020_Key_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029__x0028_facebook_x007C_fb_x0029__x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x0028__x003F_-i_x0029__x005B__x0027__x005C__x0022__x005D__x005B_0-9a-f_x005D__x007B_32_x007D__x005B__x0027__x005C__x0022__x005D__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_Facebook_x0020_Client_x0020_ID_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029__x0028_facebook_x007C_fb_x0029__x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x005B__x0027__x005C__x0022__x005D__x005B_0-9_x005D__x007B_13_x002C_17_x007D__x005B__x0027__x005C__x0022__x005D__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_Facebook_x0020_access_x0020_token_x0022__x002C__x0020__x0022_EAACEdEose0cBA_x005B_0-9A-Za-z_x005D__x002B__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_Twitter_x0020_Secret_x0020_Key_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029_twitter_x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x005B__x0027__x005C__x0022__x005D__x005B_0-9a-z_x005D__x007B_35_x002C_44_x007D__x005B__x0027__x005C__x0022__x005D__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_Twitter_x0020_Client_x0020_ID_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029_twitter_x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x005B__x0027__x005C__x0022__x005D__x005B_0-9a-z_x005D__x007B_18_x002C_25_x007D__x005B__x0027__x005C__x0022__x005D__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_Github_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029_github_x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x0028__x003F_-i_x0029__x005B__x0027__x005C__x0022__x005D__x005B_0-9a-zA-Z_x005D__x007B_35_x002C_40_x007D__x005B__x0027__x005C__x0022__x005D__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_LinkedIn_x0020_Client_x0020_ID_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029_linkedin_x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x0028__x003F_-i_x0029__x005B__x0027__x005C__x0022__x005D__x005B_0-9a-z_x005D__x007B_12_x007D__x005B__x0027__x005C__x0022__x005D__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_LinkedIn_x0020_Secret_x0020_Key_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029_linkedin_x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x005B__x0027__x005C__x0022__x005D__x005B_0-9a-z_x005D__x007B_16_x007D__x005B__x0027__x005C__x0022__x005D__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_Slack_x0022__x002C__x0020__x0022_xox_x005B_baprs_x005D_-_x0028__x005B_0-9a-zA-Z_x005D__x007B_10_x002C_48_x007D__x0029__x003F__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_EC_x0022__x002C__x0020__x0022_-----BEGIN_x0020_EC_x0020_PRIVATE_x0020_KEY-----_x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_Generic_x0020_API_x0020_key_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029_api_key_x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x005B__x0027__x007C__x005C__x0022__x005D__x005B_0-9a-zA-Z_x005D__x007B_32_x002C_45_x007D__x005B__x0027__x007C__x005C__x0022__x005D__x0022__x0029__x003B__x0020__x0020__x002F__x002F__x0020_test_x000D__x000A_regexes.Add_x0028__x0022_Generic_x0020_Secret_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029_secret_x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x005B__x0027__x007C__x005C__x0022__x005D__x005B_0-9a-zA-Z_x005D__x007B_32_x002C_45_x007D__x005B__x0027__x007C__x005C__x0022__x005D__x0022__x0029__x003B__x0020__x0020__x002F__x002F__x0020_test_x000D__x000A_regexes.Add_x0028__x0022_Google_x0020_API_x0020_key_x0022__x002C__x0020__x0022_AIza_x005B_0-9A-Za-z_x005C__x005C_-__x005D__x007B_35_x007D__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_Google_x0020_Cloud_x0020_Platform_x0020_API_x0020_key_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029__x0028_google_x007C_gcp_x007C_youtube_x007C_drive_x007C_yt_x0029__x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x005B__x0027__x005C__x0022__x005D__x005B_AIza_x005B_0-9a-z_x005C__x005C_-__x005D__x007B_35_x007D__x005D__x005B__x0027__x005C__x0022__x005D__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_Google_x0020_OAuth_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029__x0028_google_x007C_gcp_x007C_auth_x0029__x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x005B__x0027__x005C__x0022__x005D__x005B_0-9_x005D__x002B_-_x005B_0-9a-z__x005D__x007B_32_x007D__x005C__x005C_.apps_x005C__x005C_.googleusercontent_x005C__x005C_.com_x005B__x0027__x005C__x0022__x005D__x0022__x0029__x003B__x0020__x002F__x002F__x0020_test_x000D__x000A_regexes.Add_x0028__x0022_Google_x0020_OAuth_x0020_access_x0020_token_x0022__x002C__x0020__x0022_ya29_x005C__x005C_._x005B_0-9A-Za-z_x005C__x005C_-__x005D__x002B__x0022__x0029__x003B__x0020__x002F__x002F__x0020_test_x000D__x000A_regexes.Add_x0028__x0022_Heroku_x0020_API_x0020_key_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029_heroku_x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x005B__x0027__x005C__x0022__x005D__x005B_0-9a-f_x005D__x007B_8_x007D_-_x005B_0-9a-f_x005D__x007B_4_x007D_-_x005B_0-9a-f_x005D__x007B_4_x007D_-_x005B_0-9a-f_x005D__x007B_12_x007D__x005B__x0027__x005C__x0022__x005D__x0022__x0029__x003B__x0020__x0020__x002F__x002F__x0020_test_x000D__x000A_regexes.Add_x0028__x0022_MailChimp_x0020_API_x0020_key_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029__x0028_mailchimp_x007C_mc_x0029__x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x005B__x0027__x005C__x0022__x005D__x005B_0-9a-f_x005D__x007B_32_x007D_-us_x005B_0-9_x005D__x007B_1_x002C_2_x007D__x005B__x0027__x005C__x0022__x005D__x0022__x0029__x003B__x0020__x0020__x002F__x002F__x0020_test_x000D__x000A_regexes.Add_x0028__x0022_Mailgun_x0020_API_x0020_key_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029__x0028_mailgun_x007C_mg_x0029__x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x005B__x0027__x005C__x0022__x005D__x005B_0-9a-z_x005D__x007B_32_x007D__x005B__x0027__x005C__x0022__x005D__x0022__x0029__x003B__x0020__x0020__x0020__x002F__x002F__x0020_test_x000D__x000A__x002F__x002F_regexes.Add_x0028__x0022_Password_x0020_in_x0020_URL_x0022__x002C__x0020__x0022__x005B_a-zA-Z_x005D__x007B_3_x002C_10_x007D_:_x005C__x002F__x005C__x002F__x005B__x005E__x005C__x002F__x005C_s:_x0040__x005D__x007B_3_x002C_20_x007D_:_x005B__x005E__x005C__x002F__x005C_s:_x0040__x005D__x007B_3_x002C_20_x007D__x0040_._x007B_1_x002C_100_x007D__x005C__x002F__x003F_._x003F__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_PayPal_x0020_Braintree_x0020_access_x0020_token_x0022__x002C__x0020__x0022_access_token_x005C__x005C__x0024_production_x005C__x005C__x0024__x005B_0-9a-z_x005D__x007B_16_x007D__x005C__x005C__x0024__x005B_0-9a-f_x005D__x007B_32_x007D__x0022__x0029__x003B__x0020__x0020__x002F__x002F__x0020_test_x000D__x000A_regexes.Add_x0028__x0022_Picatic_x0020_API_x0020_key_x0022__x002C__x0020__x0022_sk_live__x005B_0-9a-z_x005D__x007B_32_x007D__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_Slack_x0020_Webhook_x0022__x002C__x0020__x0022_https:_x002F__x002F_hooks.slack.com_x002F_services_x002F_T_x005B_a-zA-Z0-9__x005D__x007B_8_x007D__x002F_B_x005B_a-zA-Z0-9__x005D__x007B_8_x007D__x002F__x005B_a-zA-Z0-9__x005D__x007B_24_x007D__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_Stripe_x0020_API_x0020_key_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029_stripe_x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x005B__x0027__x005C__x0022__x005D__x005B_sk_x007C_rk_x005D__live__x005B_0-9a-zA-Z_x005D__x007B_24_x007D__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_Square_x0020_access_x0020_token_x0022__x002C__x0020__x0022_sq0atp-_x005B_0-9A-Za-z_x005C__x005C_-__x005D__x007B_22_x007D__x0022__x0029__x003B__x0020__x0020__x002F__x002F__x0020_test_x000D__x000A_regexes.Add_x0028__x0022_Square_x0020_OAuth_x0020_secret_x0022__x002C__x0020__x0022_sq0csp-_x005B_0-9A-Za-z_x005C__x005C_-__x005D__x007B_43_x007D__x0022__x0029__x003B__x000D__x000A_regexes.Add_x0028__x0022_Twilio_x0020_API_x0020_key_x0022__x002C__x0020__x0022__x0028__x003F_i_x0029_twilio_x0028_._x007B_0_x002C_20_x007D__x0029__x003F__x005B__x0027__x005C__x0022__x005D__x005B_0-9a-f_x005D__x007B_32_x007D__x005B__x0027__x005C__x0022__x005D__x0022__x0029__x003B__x000D__x000A__x000D__x000A__x002F__x002F__x0020_Add_x0020_configuration_x0020_file_x0020_extensions_x0020_you_x0020_want_x0020_to_x0020_scan_x002C__x0020_these_x0020_files_x0020_have_x0020_to_x0020_be_x0020_included_x0020_in_x0020_the_x0020_scan_x0020__x000D__x000A_List_x0020__x003C__x0020_string_x0020__x003E__x0020_fileMaskList_x0020__x003D__x0020_new_x0020_List_x003C_string_x003E__x0020__x007B__x0020__x0022__x002A__x0022__x0020__x007D__x003B__x000D__x000A__x000D__x000A__x002F__x002F__x0020_setting_x0020_used_x0020_to_x0020_check_x0020_in_x0020_comments_x0020_of_x0020_config_x0020_files_x000D__x000A_bool_x0020_searchInComments_x0020__x003D__x0020_true_x003B__x000D__x000A__x000D__x000A_foreach_x0028_String_x0020_key_x0020_in_x0020_regexes.Keys_x0029__x000D__x000A__x007B__x000D__x000A__x0009_result_x0020__x002B__x003D__x0020_All.FindByRegexExt_x0028_regexes_x005B_key_x005D__x002C__x0020_fileMaskList_x002C__x0020_searchInComments_x002C__x0020_CxList.CxRegexOptions.None_x002C__x0020_RegexOptions.IgnoreCase_x0029__x003B__x000D__x000A__x007D_</Source>
+    <CWE>0</CWE>
+    <CxDescriptionId>0</CxDescriptionId>
+    <Comments />
+    <Severity>3</Severity>
+    <IsExecutable>true</IsExecutable>
+    <IsEncrypted>false</IsEncrypted>
+  </QueryDataElement>
+  <GroupDataElement>
+    <GroupId>100000</GroupId>
+    <Name>GitLeaks</Name>
+    <IsReadOnly>false</IsReadOnly>
+    <IsEncrypted>false</IsEncrypted>
+    <Description />
+    <Language>16384</Language>
+    <LanguageName>Python</LanguageName>
+    <PackageType>1</PackageType>
+    <PackageTypeName>Corp</PackageTypeName>
+    <ProjectId>0</ProjectId>
+  </GroupDataElement>
+</QuerySchema>
+
+<!--
+// Regexes from https://github.com/dxa4481/truffleHogRegexes/blob/master/truffleHogRegexes/regexes.json
+
+Dictionary<string, string> regexes = new Dictionary<string, string>(); 
+regexes.Add("AWS Client ID", "(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}");
+regexes.Add("AWS Secret Key", "(?i)aws(.{0,20})?(?-i)['\"][0-9a-zA-Z\\//+]{40}['\"]");  // test
+regexes.Add("AWS MWS key", "amzn\\.mws\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}");  // test
+regexes.Add("PKCS8", "////-BEGIN PRIVATE KEY////-");
+regexes.Add("RSA", "////-BEGIN RSA PRIVATE KEY////-");
+regexes.Add("SSH", "////-BEGIN OPENSSH PRIVATE KEY////-");
+regexes.Add("PGP", "////-BEGIN PGP PRIVATE KEY BLOCK////-");
+regexes.Add("Facebook Secret Key", "(?i)(facebook|fb)(.{0,20})?(?-i)['\"][0-9a-f]{32}['\"]");
+regexes.Add("Facebook Client ID", "(?i)(facebook|fb)(.{0,20})?['\"][0-9]{13,17}['\"]");
+regexes.Add("Facebook access token", "EAACEdEose0cBA[0-9A-Za-z]+");
+regexes.Add("Twitter Secret Key", "(?i)twitter(.{0,20})?['\"][0-9a-z]{35,44}['\"]");
+regexes.Add("Twitter Client ID", "(?i)twitter(.{0,20})?['\"][0-9a-z]{18,25}['\"]");
+regexes.Add("Github", "(?i)github(.{0,20})?(?-i)['\"][0-9a-zA-Z]{35,40}['\"]");
+regexes.Add("LinkedIn Client ID", "(?i)linkedin(.{0,20})?(?-i)['\"][0-9a-z]{12}['\"]");
+regexes.Add("LinkedIn Secret Key", "(?i)linkedin(.{0,20})?['\"][0-9a-z]{16}['\"]");
+regexes.Add("Slack", "xox[baprs]-([0-9a-zA-Z]{10,48})?");
+regexes.Add("EC", "////-BEGIN EC PRIVATE KEY////-");
+regexes.Add("Generic API key", "(?i)api_key(.{0,20})?['|\"][0-9a-zA-Z]{32,45}['|\"]");  // test
+regexes.Add("Generic Secret", "(?i)secret(.{0,20})?['|\"][0-9a-zA-Z]{32,45}['|\"]");  // test
+regexes.Add("Google API key", "AIza[0-9A-Za-z\\-_]{35}");
+regexes.Add("Google Cloud Platform API key", "(?i)(google|gcp|youtube|drive|yt)(.{0,20})?['\"][AIza[0-9a-z\\-_]{35}]['\"]");
+regexes.Add("Google OAuth", "(?i)(google|gcp|auth)(.{0,20})?['\"][0-9]+-[0-9a-z_]{32}\\.apps\\.googleusercontent\\.com['\"]"); // test
+regexes.Add("Google OAuth access token", "ya29\\.[0-9A-Za-z\\-_]+"); // test
+regexes.Add("Heroku API key", "(?i)heroku(.{0,20})?['\"][0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}['\"]");  // test
+regexes.Add("MailChimp API key", "(?i)(mailchimp|mc)(.{0,20})?['\"][0-9a-f]{32}-us[0-9]{1,2}['\"]");  // test
+regexes.Add("Mailgun API key", "(?i)(mailgun|mg)(.{0,20})?['\"][0-9a-z]{32}['\"]");   // test
+//regexes.Add("Password in URL", "[a-zA-Z]{3,10}:\/\/[^\/\s:@]{3,20}:[^\/\s:@]{3,20}@.{1,100}\/?.?");
+regexes.Add("PayPal Braintree access token", "access_token\\$production\\$[0-9a-z]{16}\\$[0-9a-f]{32}");  // test
+regexes.Add("Picatic API key", "sk_live_[0-9a-z]{32}");
+regexes.Add("Slack Webhook", "https://hooks.slack.com/services/T[a-zA-Z0-9_]{8}/B[a-zA-Z0-9_]{8}/[a-zA-Z0-9_]{24}");
+regexes.Add("Stripe API key", "(?i)stripe(.{0,20})?['\"][sk|rk]_live_[0-9a-zA-Z]{24}");
+regexes.Add("Square access token", "sq0atp-[0-9A-Za-z\\-_]{22}");  // test
+regexes.Add("Square OAuth secret", "sq0csp-[0-9A-Za-z\\-_]{43}");
+regexes.Add("Twilio API key", "(?i)twilio(.{0,20})?['\"][0-9a-f]{32}['\"]");
+
+// Add configuration file extensions you want to scan, these files have to be included in the scan 
+List < string > fileMaskList = new List<string> { "*" };
+
+// setting used to check in comments of config files
+bool searchInComments = true;
+
+foreach(String key in regexes.Keys)
+{
+	result += All.FindByRegexExt(regexes[key], fileMaskList, searchInComments, CxList.CxRegexOptions.None, RegexOptions.IgnoreCase);
+}
+-->

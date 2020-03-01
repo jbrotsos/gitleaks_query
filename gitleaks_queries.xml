@@ -1,0 +1,100 @@
+﻿<Queries><Query><QueryId>100003</QueryId><Name>CxTruffleHog</Name><Cwe>0</Cwe><PackageId>100000</PackageId><IsExecutable>true</IsExecutable><Severity>3</Severity><LanguageName>Python</LanguageName><IsEncrypted>false</IsEncrypted><IsReadOnly>false</IsReadOnly><Language>16384</Language><Description /><PackageTypeName>Corp</PackageTypeName><PackageType>1</PackageType><GroupName>Leaks</GroupName><Source>// Regexes from https://github.com/dxa4481/truffleHogRegexes/blob/master/truffleHogRegexes/regexes.json
+
+Dictionary&lt;string, string&gt; regexes = new Dictionary&lt;string, string&gt;(); 
+regexes.Add("Slack Token", "(xox[p|b|o|a]-[0-9]{12}-[0-9]{12}-[0-9]{12}-[a-z0-9]{32})");
+regexes.Add("RSA private key", "-----BEGIN RSA PRIVATE KEY-----");
+regexes.Add("SSH (DSA) private key", "-----BEGIN DSA PRIVATE KEY-----");
+regexes.Add("SSH (EC) private key", "-----BEGIN EC PRIVATE KEY-----");
+regexes.Add("PGP private key block", "-----BEGIN PGP PRIVATE KEY BLOCK-----");
+regexes.Add("Amazon AWS Access Key ID", "AKI.[0-9A-Z]{16}"); // Slight adjustment to widen the match
+regexes.Add("Amazon MWS Auth Token", "amzn\\.mws\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}");
+regexes.Add("AWS API Key", "AKI.[0-9A-Z]{16}"); // Slight adjustment to widen the match
+regexes.Add("Facebook Access Token", "EAACEdEose0cBA[0-9A-Za-z]+");
+regexes.Add("Facebook OAuth", "[f|F][a|A][c|C][e|E][b|B][o|O][o|O][k|K].*['|\"][0-9a-f]{32}['|\"]");
+regexes.Add("GitHub", "[g|G][i|I][t|T][h|H][u|U][b|B].*['|\"][0-9a-zA-Z]{35,40}['|\"]");
+regexes.Add("Generic API Key", "[a|A][p|P][i|I][_]?[k|K][e|E][y|Y].*['|\"][0-9a-zA-Z]{32,45}['|\"]");
+regexes.Add("Generic Secret", "[s|S][e|E][c|C][r|R][e|E][t|T].*['|\"][0-9a-zA-Z]{32,45}['|\"]");
+regexes.Add("Google API Key", "AIza[0-9A-Za-z\\-_]{35}");
+regexes.Add("Google Cloud Platform API Key", "AIza[0-9A-Za-z\\-_]{35}");
+regexes.Add("Google Cloud Platform OAuth", "[0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com");
+regexes.Add("Google Drive API Key", "AIza[0-9A-Za-z\\-_]{35}");
+regexes.Add("Google Drive OAuth", "[0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com");
+regexes.Add("Google (GCP) Service-account", "\"type\": \"service_account\"");
+regexes.Add("Google Gmail API Key", "AIza[0-9A-Za-z\\-_]{35}");
+regexes.Add("Google Gmail OAuth", "[0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com");
+regexes.Add("Google OAuth Access Token", "ya29\\.[0-9A-Za-z\\-_]+");
+regexes.Add("Google YouTube API Key", "AIza[0-9A-Za-z\\-_]{35}");
+regexes.Add("Google YouTube OAuth", "[0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com");
+regexes.Add("Heroku API Key", "[h|H][e|E][r|R][o|O][k|K][u|U].*[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}");
+regexes.Add("MailChimp API Key", "[0-9a-f]{32}-us[0-9]{1,2}");
+regexes.Add("Mailgun API Key", "key-[0-9a-zA-Z]{32}");
+regexes.Add("Password in URL", "[a-zA-Z]{3,10}://[^/\\s:@]{3,20}:[^/\\s:@]{3,20}@.{1,100}[\"'\\s]");
+regexes.Add("Password in URL - fixed", "[a-zA-Z]{3,10}://[^/\\s:@]*?:[^/\\s:@]*?@[^/\\s:@]*");
+regexes.Add("PayPal Braintree Access Token", "access_token\\$production\\$[0-9a-z]{16}\\$[0-9a-f]{32}");
+regexes.Add("Picatic API Key", "sk_live_[0-9a-z]{32}");
+regexes.Add("Slack Webhook", "https://hooks.slack.com/services/T[a-zA-Z0-9_]{8}/B[a-zA-Z0-9_]{8}/[a-zA-Z0-9_]{24}");
+regexes.Add("Stripe API Key", "sk_live_[0-9a-zA-Z]{24}");
+regexes.Add("Stripe Restricted API Key", "rk_live_[0-9a-zA-Z]{24}");
+regexes.Add("Square Access Token", "sq0atp-[0-9A-Za-z\\-_]{22}");
+regexes.Add("Square OAuth Secret", "sq0csp-[0-9A-Za-z\\-_]{43}");
+regexes.Add("Twilio API Key", "SK[0-9a-fA-F]{32}");
+regexes.Add("Twitter Access Token", "[t|T][w|W][i|I][t|T][t|T][e|E][r|R].*[1-9][0-9]+-[0-9a-zA-Z]{40}");
+regexes.Add("Twitter OAuth", "[t|T][w|W][i|I][t|T][t|T][e|E][r|R].*['|\"][0-9a-zA-Z]{35,44}['|\"]");
+
+// Add configuration file extensions you want to scan, these files have to be included in the scan 
+List &lt; string &gt; fileMaskList = new List&lt;string&gt; { "*" };
+
+// setting used to check in comments of config files
+bool searchInComments = true;
+
+foreach(String key in regexes.Keys)
+{
+	result += All.FindByRegexExt(regexes[key], fileMaskList, searchInComments, CxList.CxRegexOptions.None, RegexOptions.IgnoreCase);
+}</Source><EngineMetadata p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" /><Version>6</Version></Query><Query><QueryId>100002</QueryId><Name>CxGitLeaks</Name><Cwe>0</Cwe><PackageId>100000</PackageId><IsExecutable>true</IsExecutable><Severity>3</Severity><LanguageName>Python</LanguageName><IsEncrypted>false</IsEncrypted><IsReadOnly>false</IsReadOnly><Language>16384</Language><Description /><PackageTypeName>Corp</PackageTypeName><PackageType>1</PackageType><GroupName>Leaks</GroupName><Source>// Regexes from https://github.com/dxa4481/truffleHogRegexes/blob/master/truffleHogRegexes/regexes.json
+
+Dictionary&lt;string, string&gt; regexes = new Dictionary&lt;string, string&gt;(); 
+regexes.Add("AWS Client ID", "(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}");
+regexes.Add("AWS Secret Key", "(?i)aws(.{0,20})?(?-i)['\"][0-9a-zA-Z\\//+]{40}['\"]");  // test
+regexes.Add("AWS MWS key", "amzn\\.mws\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}");  // test
+regexes.Add("PKCS8", "-----BEGIN PRIVATE KEY-----");
+regexes.Add("RSA", "-----BEGIN RSA PRIVATE KEY-----");
+regexes.Add("SSH", "-----BEGIN OPENSSH PRIVATE KEY-----");
+regexes.Add("PGP", "-----BEGIN PGP PRIVATE KEY BLOCK-----");
+regexes.Add("Facebook Secret Key", "(?i)(facebook|fb)(.{0,20})?(?-i)['\"][0-9a-f]{32}['\"]");
+regexes.Add("Facebook Client ID", "(?i)(facebook|fb)(.{0,20})?['\"][0-9]{13,17}['\"]");
+regexes.Add("Facebook access token", "EAACEdEose0cBA[0-9A-Za-z]+");
+regexes.Add("Twitter Secret Key", "(?i)twitter(.{0,20})?['\"][0-9a-z]{35,44}['\"]");
+regexes.Add("Twitter Client ID", "(?i)twitter(.{0,20})?['\"][0-9a-z]{18,25}['\"]");
+regexes.Add("Github", "(?i)github(.{0,20})?(?-i)['\"][0-9a-zA-Z]{35,40}['\"]");
+regexes.Add("LinkedIn Client ID", "(?i)linkedin(.{0,20})?(?-i)['\"][0-9a-z]{12}['\"]");
+regexes.Add("LinkedIn Secret Key", "(?i)linkedin(.{0,20})?['\"][0-9a-z]{16}['\"]");
+regexes.Add("Slack", "xox[baprs]-([0-9a-zA-Z]{10,48})?");
+regexes.Add("EC", "-----BEGIN EC PRIVATE KEY-----");
+regexes.Add("Generic API key", "(?i)api_key(.{0,20})?['|\"][0-9a-zA-Z]{32,45}['|\"]");  // test
+regexes.Add("Generic Secret", "(?i)secret(.{0,20})?['|\"][0-9a-zA-Z]{32,45}['|\"]");  // test
+regexes.Add("Google API key", "AIza[0-9A-Za-z\\-_]{35}");
+regexes.Add("Google Cloud Platform API key", "(?i)(google|gcp|youtube|drive|yt)(.{0,20})?['\"][AIza[0-9a-z\\-_]{35}]['\"]");
+regexes.Add("Google OAuth", "(?i)(google|gcp|auth)(.{0,20})?['\"][0-9]+-[0-9a-z_]{32}\\.apps\\.googleusercontent\\.com['\"]"); // test
+regexes.Add("Google OAuth access token", "ya29\\.[0-9A-Za-z\\-_]+"); // test
+regexes.Add("Heroku API key", "(?i)heroku(.{0,20})?['\"][0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}['\"]");  // test
+regexes.Add("MailChimp API key", "(?i)(mailchimp|mc)(.{0,20})?['\"][0-9a-f]{32}-us[0-9]{1,2}['\"]");  // test
+regexes.Add("Mailgun API key", "(?i)(mailgun|mg)(.{0,20})?['\"][0-9a-z]{32}['\"]");   // test
+//regexes.Add("Password in URL", "[a-zA-Z]{3,10}:\/\/[^\/\s:@]{3,20}:[^\/\s:@]{3,20}@.{1,100}\/?.?");
+regexes.Add("PayPal Braintree access token", "access_token\\$production\\$[0-9a-z]{16}\\$[0-9a-f]{32}");  // test
+regexes.Add("Picatic API key", "sk_live_[0-9a-z]{32}");
+regexes.Add("Slack Webhook", "https://hooks.slack.com/services/T[a-zA-Z0-9_]{8}/B[a-zA-Z0-9_]{8}/[a-zA-Z0-9_]{24}");
+regexes.Add("Stripe API key", "(?i)stripe(.{0,20})?['\"][sk|rk]_live_[0-9a-zA-Z]{24}");
+regexes.Add("Square access token", "sq0atp-[0-9A-Za-z\\-_]{22}");  // test
+regexes.Add("Square OAuth secret", "sq0csp-[0-9A-Za-z\\-_]{43}");
+regexes.Add("Twilio API key", "(?i)twilio(.{0,20})?['\"][0-9a-f]{32}['\"]");
+
+// Add configuration file extensions you want to scan, these files have to be included in the scan 
+List &lt; string &gt; fileMaskList = new List&lt;string&gt; { "*" };
+
+// setting used to check in comments of config files
+bool searchInComments = true;
+
+foreach(String key in regexes.Keys)
+{
+	result += All.FindByRegexExt(regexes[key], fileMaskList, searchInComments, CxList.CxRegexOptions.None, RegexOptions.IgnoreCase);
+}</Source><EngineMetadata p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" /><Version>15</Version></Query></Queries>
