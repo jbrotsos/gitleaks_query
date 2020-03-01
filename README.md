@@ -1,3 +1,7 @@
+## About
+
+This script is not supported by Checkmarx and edge cases are not tested, use it as your own.
+
 This query enables Checkmarx to scan for common keys and tokens often found in GIT repositories.  It is based off regex's created by [GitLeaks](https://github.com/zricethezav/gitleaks) and [TruffleHog](https://github.com/dxa4481/truffleHog).
 
 ## Import the Query directly into Checkmarx
